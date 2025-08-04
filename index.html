@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/KENPAT-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js" defer></script>
+    <title>KENPAT</title>
+</head>
+<body>
+    <!-- Introductory Section -->
+    <section class="header-section bg-blue-900 text-white">
+  <!-- HEADER -->
+  <header class="normal-header flex flex-col md:flex-row items-center justify-between p-4 gap-4 md:gap-0">
+    <h1 class="text-white font-bold text-2xl">KENPAT</h1>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul class="flex flex-col md:flex-row items-center gap-4 nav_links">
+        <li><a href="#" class="nav_link hover:underline">Home</a></li>
+        <li><a href="#aboutus" class="nav_link hover:underline">About Us</a></li>
+        <li><a href="#testimonials" class="nav_link hover:underline">Testimonials</a></li>
+        <li><a href="#" class="nav_link hover:underline">Get in touch</a></li>
+      </ul>
+    </nav>
+
+    <!-- REGISTER BUTTON -->
+    <button class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+      Register
+    </button>
+  </header>
+
+  <!-- MAIN HEADING + PARAGRAPH -->
+  <article class="hone-article flex flex-col items-center justify-center text-center p-6 gap-4">
+    <h1 class="font-bold text-3xl md:text-5xl max-w-xl">A Classical Education for the Future</h1>
+    <p class="information font-medium text-sm md:text-base max-w-md">We prepare you to engage in the world that is and to help bring about a world that ought to be</p>
+  </article>
+
+  <!-- BOTTOM LINKS -->
+  <article class="links-div">
+    <ul class="section-links shadow-lg flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center py-4 bg-white text-blue-900 font-semibold">
+      <li>Quality Education</li>
+      <li>Examination</li>
+      <li>Competition</li>
+    </ul>
+  </article>
+</section>
+
+
+    <!-- Category section -->
+    <section class="catSection my-10 px-4" id="aboutus">
+  <h1 class="text-2xl font-semibold text-center mb-8">What do we do?</h1>
+
+  <div class="flex flex-col items-center justify-center gap-12">
+
+    <!-- Quality Education Block -->
+    <div class="flex flex-col md:flex-row items-center justify-center max-w-5xl gap-8 p-4">
+      <img src="./assets/christina-wocintechchat-com-Jp-X63-an8U-unsplash.jpg" 
+           class="w-full md:w-1/2 rounded-lg shadow-md" 
+           alt="teacher">
+           
+      <article class="flex flex-col gap-4 text-justify">
+        <h2 class="text-xl md:text-2xl font-semibold">Quality Education</h2>
+        <p>
+          At <span class="font-bold">Kenpat</span>, we are committed to delivering a world-class education that empowers students to excel academically and personally. Our curriculum blends rigorous academics with innovative learning experiences, fostering critical thinking, creativity, and global awareness. With small class sizes and dedicated educators, we ensure personalized attention that nurtures each student’s unique potential. From advanced STEM programs to enriching arts and humanities, our holistic approach prepares students for success in a rapidly changing world. Join us to experience an education that inspires lifelong learning and achievement.
+        </p>
+      </article>
+    </div>
+
+    <!-- Efficient Teaching Block -->
+    <div class="flex flex-col md:flex-row-reverse items-center justify-center max-w-5xl gap-8 p-4">
+      <img src="/assets/gabe-pierce-Ll4FuKbIPAU-unsplash.jpg" 
+           class="w-full md:w-1/2 rounded-lg shadow-md" 
+           alt="teaching">
+           
+      <article class="flex flex-col gap-4 text-justify">
+        <h2 class="text-xl md:text-2xl font-semibold">Efficient Teaching</h2>
+        <p>
+          Our teaching philosophy at <span class="font-bold">Kenpat</span> centers on efficiency and impact. Our highly qualified educators leverage research-based methods and cutting-edge technology to deliver lessons that are engaging and effective. By tailoring instruction to diverse learning styles, we maximize student understanding and retention. Our streamlined approach minimizes wasted time, ensuring every moment in the classroom counts. With a focus on collaboration, real-world applications, and continuous feedback, our teachers empower students to grasp complex concepts quickly and confidently, setting them on a path to academic excellence.
+        </p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+
+    
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="flex flex-col items-center justify-center gap-6 my-10 px-4 text-center overflow-hidden">
+  <h1 class="text-2xl md:text-3xl font-bold">What our students say</h1>
+
+  <div class="slider-container relative w-full max-w-4xl overflow-hidden">
+    <!-- SLIDER WRAPPER -->
+    <div class="slider flex transition-transform duration-700 ease-in-out">
+      <!-- SLIDE 1 -->
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+        <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"Kenpat transformed my learning experience with supportive teachers and engaging classes."</p>
+        <p class="font-semibold text-gray-900">Mary Aigbe</p>
+        <p class="text-sm text-gray-500">Senior, Class of 2025</p>
+      </div>
+      <!-- SLIDE 2 -->
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+        <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"I experienced learning at its peak being taught through practicals and not just theory."</p>
+        <p class="font-semibold text-gray-900">Agunobi Precious</p>
+        <p class="text-sm text-gray-500">Senior, Class of 2019</p>
+      </div>
+      <!-- SLIDE 3 -->
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+        <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"The arts program gave me confidence to perform and express myself creatively."</p>
+        <p class="font-semibold text-gray-900">Chidinma Martinez</p>
+        <p class="text-sm text-gray-500">Junior, Drama Club</p>
+      </div>
+      <!-- SLIDE 4 -->
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+        <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"Teachers here genuinely care, helping me improve my grades and confidence."</p>
+        <p class="font-semibold text-gray-900">Rima Cart</p>
+        <p class="text-sm text-gray-500">Grade 9</p>
+      </div>
+    </div>
+
+    <!-- NAVIGATION BUTTONS -->
+    <button class="slider__btn slider__btn--left absolute top-1/2 left-2 md:left-6 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full z-10">&larr;</button>
+    <button class="slider__btn slider__btn--right absolute top-1/2 right-2 md:right-6 transform -translate-y-1/2 bg-blue-500 text-white p-3 rounded-full z-10">&rarr;</button>
+
+    <!-- DOTS -->
+    <div class="dots mt-6 flex justify-center gap-3"></div>
+  </div>
+</section>
+
+
+
+    <!-- Validate section -->
+    <section class="validate">
+        <article class="validateArticle sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                We are <span class="slant-underline text-blue-600">Experts</span> at what we do!
+            </h1>
+            <p class="text-lg text-gray-700 max-w-md mx-auto mb-6">
+                At Kenpat, our expert educators deliver innovative, personalized learning that empowers students to excel. With a commitment to academic excellence and holistic growth, we shape future leaders ready to thrive in a dynamic world. Enroll today to experience education at its finest.
+            </p>
+            <button class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                Enroll Now
+            </button>
+        </div>
+    </article>
+    </section>
+
+    <!-- Contact us -->
+     <section id="contact" class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-6">Contact Us</h2>
+            <p class="text-lg text-gray-600 text-center mb-8">Have questions? Reach out to us, and we'll get back to you soon!</p>
+            <form 
+            action="https://formspree.io/f/mkgzvaln"
+            method="post"
+            class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" required
+                           class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                           placeholder="Enter your full name">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required
+                           class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                           placeholder="Enter your email">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone"
+                           class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                           placeholder="Enter your phone number">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" required rows="5"
+                              class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                              placeholder="Tell us how we can help"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                <p class="text-gray-400">Kenpat College</p>
+                <p class="text-gray-400">Ajara Tako, Badagry Lagos State, Nigeria</p>
+                <p class="text-gray-400">Phone: +2349067993442</p>
+                <p class="text-gray-400">Email: kenpatecollege@gmail.com</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-blue-400 transition">Home</a></li>
+                    <li><a href="#aboutus" class="text-gray-400 hover:text-blue-400 transition">About Us</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-blue-400 transition">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Social Media -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="https://x.com" class="text-gray-400 hover:text-blue-400 transition" aria-label="Follow us on X">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://facebook.com" class="text-gray-400 hover:text-blue-400 transition" aria-label="Follow us on Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" class="text-gray-400 hover:text-blue-400 transition" aria-label="Follow us on Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.332.014 7.052.072 3.668.227 1.981 1.911 1.826 5.295.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.227 3.384 1.911 5.071 5.295 5.226 1.28.058 1.689.072 4.948.072s3.668-.014 4.948-.072c3.384-.227 5.071-1.911 5.226-5.295.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.227-3.384-1.911-5.071-5.295-5.226C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm4.9-11.162c-.796 0-1.441.645-1.441 1.441s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.441-1.441-1.441z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-400">
+            <p>&copy; 2025 Kenpat. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script>
+  const slides = document.querySelectorAll(".slide");
+  const slider = document.querySelector(".slider");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  // Functions
+  const goToSlide = (slide) => {
+    slider.style.transform = `translateX(-${slide * 100}%)`;
+  };
+
+  const createDots = () => {
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.classList.add("dots__dot");
+      dot.dataset.slide = i;
+      dotContainer.appendChild(dot);
+    });
+  };
+
+  const activateDot = (slide) => {
+    document
+      .querySelectorAll(".dots__dot")
+      .forEach(dot => dot.classList.remove("dots__dot--active"));
+    document
+      .querySelector(`.dots__dot[data-slide="${slide}"]`)
+      .classList.add("dots__dot--active");
+  };
+
+  const nextSlide = () => {
+    curSlide = (curSlide + 1) % maxSlide;
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  const prevSlide = () => {
+    curSlide = (curSlide - 1 + maxSlide) % maxSlide;
+    goToSlide(curSlide);
+    activateDot(curSlide);
+  };
+
+  // Init
+  goToSlide(0);
+  createDots();
+  activateDot(0);
+
+  // Event listeners
+  btnRight.addEventListener("click", nextSlide);
+  btnLeft.addEventListener("click", prevSlide);
+  dotContainer.addEventListener("click", e => {
+    if (e.target.classList.contains("dots__dot")) {
+      const slide = e.target.dataset.slide;
+      curSlide = slide;
+      goToSlide(slide);
+      activateDot(slide);
+    }
+  });
+</script>
+
+</html>
