@@ -13,21 +13,27 @@
     <!-- Introductory Section -->
     <section class="header-section bg-blue-900 text-white">
   <!-- HEADER -->
-  <header class="normal-header flex flex-col md:flex-row items-center justify-between p-4 gap-4 md:gap-0">
+  <header class="normal-header flex flex-row items-center justify-between p-4 gap-4 md:gap-0">
     <h1 class="text-white font-bold text-2xl">KENPAT</h1>
 
+    <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+    </button>
+
     <!-- NAVIGATION -->
-    <nav>
+    <nav class=" nav-menu">
       <ul class="flex flex-col md:flex-row items-center gap-4 nav_links">
         <li><a href="#" class="nav_link hover:underline">Home</a></li>
         <li><a href="#aboutus" class="nav_link hover:underline">About Us</a></li>
         <li><a href="#testimonials" class="nav_link hover:underline">Testimonials</a></li>
-        <li><a href="#" class="nav_link hover:underline">Get in touch</a></li>
+        <li><a href="#contactus" class="nav_link hover:underline">Contact</a></li>
       </ul>
     </nav>
 
     <!-- REGISTER BUTTON -->
-    <button class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+    <button class="bg-blue-500 px-4 py-2 hidden lg:inline rounded-lg hover:bg-blue-600 transition">
       Register
     </button>
   </header>
@@ -39,8 +45,8 @@
   </article>
 
   <!-- BOTTOM LINKS -->
-  <article class="links-div">
-    <ul class="section-links shadow-lg flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center py-4 bg-white text-blue-900 font-semibold">
+  <article class=" md:flex md:items-center md:justify-center text-black font-semibold">
+    <ul class="section-links md:shadow-lg flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center py-4 bg-white text-blue-900 font-semibold md:-mb-2">
       <li>Quality Education</li>
       <li>Examination</li>
       <li>Competition</li>
@@ -48,7 +54,7 @@
   </article>
 </section>
 
-
+  <div class="overlay"></div>
     <!-- Category section -->
     <section class="catSection my-10 px-4" id="aboutus">
   <h1 class="text-2xl font-semibold text-center mb-8">What do we do?</h1>
@@ -151,7 +157,7 @@
     </section>
 
     <!-- Contact us -->
-     <section id="contact" class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+     <section id="contactus" class="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-2xl mx-auto">
             <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-6">Contact Us</h2>
             <p class="text-lg text-gray-600 text-center mb-8">Have questions? Reach out to us, and we'll get back to you soon!</p>
@@ -295,6 +301,32 @@
       activateDot(slide);
     }
   });
+
+  const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.overlay');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        // Close menu when overlay is clicked
+        overlay.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        // Close menu when a nav link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        });
 </script>
 
 </html>

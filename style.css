@@ -44,15 +44,15 @@ nav{
 }
 
 .section-links{
-    display: flex;
+    /* display: flex;
     align-items: center;
     gap: 1rem;
     list-style: none;
-    margin-bottom: -1rem;
+    margin-bottom: -1rem; */
     
     padding: 1rem;
-    background-color: white;
-    border-radius: 0.3rem;
+    /* background-color: white;
+    border-radius: 0.3rem; */
 }
 
 .catSection{
@@ -155,3 +155,128 @@ nav{
   opacity: 1;
 }
 
+
+/* mobil menu */
+
+.hamburger {
+            display: block;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            background: none;
+            border: none;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            background: #fff;
+            display: block;
+            height: 3px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Rotate hamburger into X when active */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Navigation menu styling */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100%;
+            background-color: #3b82f6;
+            padding-top: 60px;
+            transition: right 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li {
+            padding: 1rem;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ddd;
+        }
+
+        /* Overlay for background dimming */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.765);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 998;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Main content */
+        .content {
+            padding: 80px 20px;
+        }
+
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .hamburger {
+                display: none;
+            }
+
+            .nav-menu {
+                position: static;
+                width: auto;
+                height: auto;
+                background: none;
+                padding-top: 0;
+                display: flex;
+            }
+
+            .nav-menu ul {
+                display: flex;
+            }
+
+            .nav-menu li {
+                padding: 0 1rem;
+            }
+
+            .overlay {
+                display: none;
+            }
+        }
