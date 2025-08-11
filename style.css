@@ -18,6 +18,10 @@ nav{
     font-weight: 200;
 }
 
+/* .hidden{
+    display: none;
+} */
+
 .normal-header{
     margin-inline: 15px;
     margin-block: 20px;
@@ -25,7 +29,7 @@ nav{
 
 .header-section{
     /* background-color: rgba(9, 2, 50, 0.667); */
-    background-image: url('/assets/ivan-aleksic-PDRFeeDniCk-unsplash.jpg');
+    background-image: url('/assets/ivan-aleksic-PDRFeeDniCk-unsplash (1).jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -180,6 +184,40 @@ nav{
         /* Rotate hamburger into X when active */
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburgerNav {
+            display: block;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            background: none;
+            border: none;
+            /* top: 0px;
+            left: 100%; */
+            top: -5px;
+            left: 75%;
+            z-index: 1001;
+            /* transform: rotate(45deg) translate(5px, 5px); */
+        }
+
+        .hamburgerNav span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .hamburgerNav span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburgerNav span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        .hamburgerNav span {
+            background: #fff;
+            display: block;
+            height: 3px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
         }
 
         .hamburger.active span:nth-child(2) {

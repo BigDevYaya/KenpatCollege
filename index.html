@@ -9,9 +9,18 @@
     <script src="main.js" defer></script>
     <title>KENPAT</title>
 </head>
-<body>
+<body id="main-content" class="hidden">
+  <header class="sticky top-0 z-50 bg-blue-500 shadow-md flex items-center justify-between p-4 transition-all duration-300 md:hidden hidden" id="sticky-header">
+    <h1 class="text-white font-bold text-2xl">KENPAT</h1>
+    <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+    </button>
+  </header>
     <!-- Introductory Section -->
-    <section class="header-section bg-blue-900 text-white">
+  
+    <section class="header-section text-white">
   <!-- HEADER -->
   <header class="normal-header flex flex-row items-center justify-between p-4 gap-4 md:gap-0">
     <h1 class="text-white font-bold text-2xl">KENPAT</h1>
@@ -24,6 +33,12 @@
 
     <!-- NAVIGATION -->
     <nav class=" nav-menu">
+
+      <button class="hamburgerNav">
+            <span></span>
+            <span></span>
+            <span></span>
+      </button>
       <ul class="flex flex-col md:flex-row items-center gap-4 nav_links">
         <li><a href="#" class="nav_link hover:underline">Home</a></li>
         <li><a href="#aboutus" class="nav_link hover:underline">About Us</a></li>
@@ -63,7 +78,7 @@
 
     <!-- Quality Education Block -->
     <div class="flex flex-col md:flex-row items-center justify-center max-w-5xl gap-8 p-4">
-      <img src="./assets/christina-wocintechchat-com-Jp-X63-an8U-unsplash.jpg" 
+      <img src="./assets/christina-wocintechchat-com-Jp-X63-an8U-unsplash (1).jpg" 
            class="w-full md:w-1/2 rounded-lg shadow-md" 
            alt="teacher">
            
@@ -77,7 +92,7 @@
 
     <!-- Efficient Teaching Block -->
     <div class="flex flex-col md:flex-row-reverse items-center justify-center max-w-5xl gap-8 p-4">
-      <img src="/assets/gabe-pierce-Ll4FuKbIPAU-unsplash.jpg" 
+      <img src="/assets/gabe-pierce-Ll4FuKbIPAU-unsplash (1).jpg" 
            class="w-full md:w-1/2 rounded-lg shadow-md" 
            alt="teaching">
            
@@ -150,7 +165,9 @@
                 At Kenpat, our expert educators deliver innovative, personalized learning that empowers students to excel. With a commitment to academic excellence and holistic growth, we shape future leaders ready to thrive in a dynamic world. Enroll today to experience education at its finest.
             </p>
             <button class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
-                Enroll Now
+                <a href="https://wa.me/2348086106822?text=Hello%2C%20I%20would%20like%20to%20enroll%20now%20for%20the%20program.%20Please%20share%20the%20next%20steps." target="_blank">
+                    Enroll Now
+                </a>
             </button>
         </div>
     </article>
@@ -302,21 +319,34 @@
     }
   });
 
-  const hamburger = document.querySelector('.hamburger');
+  const hamburger = document.querySelectorAll('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         const overlay = document.querySelector('.overlay');
+        const harmburgerNav = document.querySelector('.hamburgerNav');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
+        hamburger.forEach(hamburg => {
+          hamburg.addEventListener('click', () => {
+            hamburg.classList.toggle('active');
             navMenu.classList.toggle('active');
             overlay.classList.toggle('active');
+        })
         });
 
         // Close menu when overlay is clicked
         overlay.addEventListener('click', () => {
-            hamburger.classList.remove('active');
+            hamburger.forEach(hamburg => {
+                hamburg.classList.remove('active');
+            });
             navMenu.classList.remove('active');
             overlay.classList.remove('active');
+        });
+
+        harmburgerNav.addEventListener('click', () => {
+            hamburger.forEach(hamburg => {
+                hamburg.classList.remove('active');
+            });
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
         });
 
         // Close menu when a nav link is clicked

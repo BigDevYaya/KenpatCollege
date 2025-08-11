@@ -95,3 +95,65 @@
 // //         })
 // //     }
 // // })
+
+// const headerSection = document.querySelector('.header-section');
+
+// console.log(headerSection.style);
+
+const headerSection = document.querySelector('.header-section');
+
+document.addEventListener('DOMContentLoaded', () => {
+    let image = document.querySelector('.header-section').style.backgroundImage;
+    
+    if(image) {
+        image.addEventListener('load', () => {
+            document.getElementById('main-content').classList.remove('hidden');
+
+        })
+    } else {
+        image = 'url(/assets/ivan-aleksic-PDRFeeDniCk-unsplash.jpg)';
+        document.getElementById('main-content').classList.remove('hidden');
+    }
+})
+
+const stickyHeader = () => {
+    const header = document.getElementById('sticky-header');
+    const sticky = headerSection.getBoundingClientRect().top + window.pageYOffset;
+    const harmburgerNav = document.querySelector('.hamburgerNav');
+
+    const options = {
+        root : null,
+        rootMargin: '0px',
+        rootPadding: '0px',
+        threshold: 0.1
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        console.log(entries);
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                header.classList.add('hidden');
+                harmburgerNav.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+                harmburgerNav.classList.remove('hidden');
+            }
+
+            console.log(entry);
+        });
+    }, options);
+
+    observer.observe(headerSection);
+
+    console.log(sticky);
+
+    // window.onscroll = () => {
+    //     if (window.pageYOffset > sticky) {
+    //         header.classList.remove('hidden')
+    //     } else if (window.pageYOffset < sticky) {
+    //         header.classList.add('hidden');
+    //     }
+    // };
+}
+
+stickyHeader()
