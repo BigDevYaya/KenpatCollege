@@ -10,17 +10,17 @@
     <title>KENPAT</title>
 </head>
 <body id="main-content" class="hidden">
-  <header class="sticky top-0 z-50 bg-blue-500 shadow-md flex items-center justify-between p-4 transition-all duration-300 md:hidden hidden" id="sticky-header">
+  <div class=" z-50 bg-blue-500 shadow-md flex items-center justify-between p-4 md:hidden" id="sticky-header">
     <h1 class="text-white font-bold text-2xl">KENPAT</h1>
     <button class="hamburger">
             <span></span>
             <span></span>
             <span></span>
     </button>
-  </header>
-    <!-- Introductory Section -->
+  </div>
+  <!-- Introductory Section -->
   
-    <section class="header-section text-white">
+  <section class="header-section text-white">
   <!-- HEADER -->
   <header class="normal-header flex flex-row items-center justify-between p-4 gap-4 md:gap-0">
     <h1 class="text-white font-bold text-2xl">KENPAT</h1>
@@ -34,13 +34,12 @@
     <!-- NAVIGATION -->
     <nav class=" nav-menu">
 
-      <button class="hamburgerNav">
+      <button class="hamburgerNav md:hidden">
             <span></span>
             <span></span>
             <span></span>
       </button>
       <ul class="flex flex-col md:flex-row items-center gap-4 nav_links">
-        <li><a href="#" class="nav_link hover:underline">Home</a></li>
         <li><a href="#aboutus" class="nav_link hover:underline">About Us</a></li>
         <li><a href="#testimonials" class="nav_link hover:underline">Testimonials</a></li>
         <li><a href="#contactus" class="nav_link hover:underline">Contact</a></li>
@@ -61,15 +60,16 @@
 
   <!-- BOTTOM LINKS -->
   <article class=" md:flex md:items-center md:justify-center text-black font-semibold">
-    <ul class="section-links md:shadow-lg flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center py-4 bg-white text-blue-900 font-semibold md:-mb-2">
+    <ul class="section-links md:shadow-lg flex flex-col md:flex-row gap-2 md:gap-8 items-center justify-center py-4 bg-white text-blue-900 font-semibold md:-mb-2" id="bottom-links">
       <li>Quality Education</li>
       <li>Examination</li>
       <li>Competition</li>
     </ul>
   </article>
-</section>
+  </section>
 
   <div class="overlay"></div>
+  <div class="opacity-0 transition-opacity duration-500 ease-in-out" id="main-content-container">
     <!-- Category section -->
     <section class="catSection my-10 px-4" id="aboutus">
   <h1 class="text-2xl font-semibold text-center mb-8">What do we do?</h1>
@@ -105,7 +105,7 @@
     </div>
 
   </div>
-</section>
+  </section>
 
 
     
@@ -118,25 +118,25 @@
     <!-- SLIDER WRAPPER -->
     <div class="slider flex transition-transform duration-700 ease-in-out">
       <!-- SLIDE 1 -->
-      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6">
         <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"Kenpat transformed my learning experience with supportive teachers and engaging classes."</p>
         <p class="font-semibold text-gray-900">Mary Aigbe</p>
         <p class="text-sm text-gray-500">Senior, Class of 2025</p>
       </div>
       <!-- SLIDE 2 -->
-      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg ">
         <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"I experienced learning at its peak being taught through practicals and not just theory."</p>
         <p class="font-semibold text-gray-900">Agunobi Precious</p>
         <p class="text-sm text-gray-500">Senior, Class of 2019</p>
       </div>
       <!-- SLIDE 3 -->
-      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg ">
         <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"The arts program gave me confidence to perform and express myself creatively."</p>
         <p class="font-semibold text-gray-900">Chidinma Martinez</p>
         <p class="text-sm text-gray-500">Junior, Drama Club</p>
       </div>
       <!-- SLIDE 4 -->
-      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md">
+      <div class="slide min-w-full flex flex-col items-center justify-center bg-white p-6 rounded-lg ">
         <p class="text-lg text-gray-700 italic mb-4 max-w-xl">"Teachers here genuinely care, helping me improve my grades and confidence."</p>
         <p class="font-semibold text-gray-900">Rima Cart</p>
         <p class="text-sm text-gray-500">Grade 9</p>
@@ -150,7 +150,7 @@
     <!-- DOTS -->
     <div class="dots mt-6 flex justify-center gap-3"></div>
   </div>
-</section>
+  </section>
 
 
 
@@ -256,6 +256,7 @@
             <p>&copy; 2025 Kenpat. All rights reserved.</p>
         </div>
     </footer>
+  </div>
 </body>
 <script>
   const slides = document.querySelectorAll(".slide");

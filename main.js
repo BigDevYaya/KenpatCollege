@@ -99,8 +99,9 @@
 // const headerSection = document.querySelector('.header-section');
 
 // console.log(headerSection.style);
-
+const bottomLinks = document.getElementById('bottom-links');
 const headerSection = document.querySelector('.header-section');
+const mainContentContainer = document.getElementById('main-content-container');
 
 document.addEventListener('DOMContentLoaded', () => {
     let image = document.querySelector('.header-section').style.backgroundImage;
@@ -125,21 +126,24 @@ const stickyHeader = () => {
         root : null,
         rootMargin: '0px',
         rootPadding: '0px',
-        threshold: 0.1
+        threshold: 0.5
     }
 
+    
+
     const observer = new IntersectionObserver((entries) => {
-        console.log(entries);
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                header.classList.add('hidden');
+                header.classList.remove('header-visible');
+                header.classList.add( 'hidden');
                 harmburgerNav.classList.add('hidden');
             } else {
+                header.classList.add('header-visible');
                 header.classList.remove('hidden');
+                header.classList.add('max-h-[500px]', 'mt-4');
                 harmburgerNav.classList.remove('hidden');
             }
 
-            console.log(entry);
         });
     }, options);
 
@@ -157,3 +161,39 @@ const stickyHeader = () => {
 }
 
 stickyHeader()
+
+const observerTwo = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                bottomLinks.classList.add('opacity-0');
+                mainContentContainer.classList.remove('opacity-100');
+                mainContentContainer.classList.add('opacity-0');
+                // bottomLinks.classList.remove('md:flex');
+            } else {
+                bottomLinks.classList.remove('opacity-0');
+                bottomLinks.classList.add('bottom-links');
+                mainContentContainer.classList.remove('opacity-0');
+                mainContentContainer.classList.add('opacity-100');
+                observerTwo.unobserve(headerSection);
+            }
+        })
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7
+    })
+
+    observerTwo.observe(headerSection)
+    
+
+
+// document.addEventListener('scroll', (e) => {
+//     const scrollPosition = window.scrollY + window.innerHeight;
+//     const bottomLinksPosition = bottomLinks.getBoundingClientRect().top + window.pageYOffset;
+
+//     if (scrollPosition >= bottomLinksPosition) {
+//         bottomLinks.classList.add('hidden');
+//     } else {
+//         bottomLinks.classList.remove('hidden');
+//     }
+// })
