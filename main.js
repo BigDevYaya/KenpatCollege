@@ -126,7 +126,7 @@ const stickyHeader = () => {
         root : null,
         rootMargin: '0px',
         rootPadding: '0px',
-        threshold: 0.5
+        threshold: 0.1
     }
 
     
@@ -135,12 +135,13 @@ const stickyHeader = () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 header.classList.remove('header-visible');
-                header.classList.add( 'hidden');
                 harmburgerNav.classList.add('hidden');
             } else {
+                header.style.display = 'flex';
+                header.style.zIndex = '100';
+                header.style.position = 'fixed';
                 header.classList.add('header-visible');
-                header.classList.remove('hidden');
-                header.classList.add('max-h-[500px]', 'mt-4');
+                
                 harmburgerNav.classList.remove('hidden');
             }
 
