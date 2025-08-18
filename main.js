@@ -181,12 +181,37 @@ const observerTwo = new IntersectionObserver((entries) => {
     }, {
         root: null,
         rootMargin: '0px',
-        threshold: 0.7
+        threshold: 0.9
     })
 
     observerTwo.observe(headerSection)
     
 
+document.getElementById('nav-menu').addEventListener('click', (e) => {
+    
+    if(e.target.classList.contains('nav_link')){
+        e.preventDefault();
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    } else {
+        return;
+    }
+})
+
+document.getElementById('nav-menutwo').addEventListener('click', (e) => {
+    
+    if(e.target.classList.contains('nav_link')){
+        e.preventDefault();
+        const id = e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({
+            behavior: 'smooth'
+        });
+    } else {
+        return;
+    }
+})
 
 // document.addEventListener('scroll', (e) => {
 //     const scrollPosition = window.scrollY + window.innerHeight;

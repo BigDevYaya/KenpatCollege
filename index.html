@@ -25,7 +25,7 @@
     </button>
 
     <!-- Desktop nav (hidden on small screens) -->
-    <nav class=" hidden md:flex">
+    <nav class=" hidden md:flex" id="nav-menu">
       <!-- Secondary hamburger (hidden on md+) -->
       <button class="hamburgerNav md:hidden">
         <span></span>
@@ -62,7 +62,7 @@
       </button>
 
       <!-- Off-canvas / mobile nav container (controlled by JS) -->
-      <nav class="nav-menu">
+      <nav class="nav-menu" id="nav-menutwo">
         <button class="hamburgerNav hidden md:hidden">
           <span></span>
           <span></span>
@@ -467,7 +467,9 @@
 
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
+      hamburger.forEach(hamburg => {
+        hamburg.classList.remove('active');
+      });
       navMenu.classList.remove('active');
       overlay.classList.remove('active');
     });
